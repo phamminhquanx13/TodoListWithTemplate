@@ -6,11 +6,13 @@ import Form from './components/Form';
 import ListItem from './components/ListItem';
 import Items from './mockdata/Items';
 import Item from './components/Item';
+import SweetAlert from 'sweetalert-react'
 class App extends Component {
     constructor(props) {    
         super(props);
         this.state = {
-            items: Items
+            items: Items,
+            showAlert: false
         }
     }
     renderItem = () => {
@@ -24,9 +26,11 @@ class App extends Component {
             )
         });
     }
+
     render() {
         return (
-            <div className="container">
+         
+                 <div className="container">
                 <Title />
                 <div className="row">
                     <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
